@@ -66,8 +66,7 @@ export default {
 }
 html,
 body {
-  height: 100%;
-  width: 100vw;
+  height: calc(100% - 50px);
   padding: 1rem;
   background-image: linear-gradient(to right, #7f53ac 0, #657ced 100%);
 }
@@ -79,10 +78,9 @@ hr.solid {
   margin: 10px 0;
 }
 .main-container {
-  height: calc(100% - 50px);
-  position: relative;
+  width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 30% 1fr;
   grid-template-rows: auto; /* auto */
   grid-template-areas:
     "header header "
@@ -129,6 +127,7 @@ hr.solid {
   padding: 1.5rem;
   border-radius: .25rem;
   grid-area: content;
+  width: 100%;
   /* align-self: end; */
   &.messages {
     overflow:auto;
